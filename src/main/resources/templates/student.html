@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>学生成绩管理系统</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+		<script src="https://cdn.bootcss.com/jquery/1.2.3/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+	</head>
+	<body>
+
+		<!-- Header -->
+		<div id="header">
+			<div class="container"> 
+				
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="#">成绩管理系统</a></h1>
+				</div>
+				
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="teacher.html">老师信息管理</a></li>
+						<li class="active"><a href="student.html">学生信息管理</a></li>
+						<li ><a href="course.html">课程管理</a></li>
+						<li ><a href="grade.html">成绩管理</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row"> 
+
+					<!-- Content -->
+					<div id="content" class="12u skel-cell-important" align="center">
+						<section>
+							<header>
+								<h2>学生信息管理</h2>								
+							</header>	
+							<table>
+								<tr>
+									<th>学号<input type="text" name="job_num" id="job_num" value="" /></th>
+									<th>姓名 <input type="text" id="name" value="" /></th>
+									<th>学院 <input type="text" id="college" value="" /></th>
+									<th>班级号 <input type="text" id="class" value="" /></th>
+									<th><input type="submit" id="" name="" value="筛选" /></th>
+								</tr>								
+							</table>
+							<table width="600">
+								<thead style="font-weight:bolder">
+									<tr>
+									    <th>学号</th>
+									    <th>姓名</th>									    
+									    <th>学院</th>
+									    <th>性别</th>
+									    <th>班级号</th>
+									    <th>操作</th>
+									 </tr>
+								</thead>
+								<tbody>
+									<tr>
+									    <th>Z09316201</th>
+									    <th>张三</th>
+									    <th>计算机科学与工程学院</th>
+									    <th>男</th>
+									    <th>Z093162</th>
+									    <th>
+									    	<input type="button" value="编辑" onclick="openEditor()"/>
+									    	<input type="button" value="删除" onclick=""/>
+									    </th>
+								     </tr>							 	
+								</tbody>
+							</table>
+							
+							<a href="#"><input type="button" value="添加" onclick="openAdd()"/></a>
+							<script>
+								function openEditor(){
+									window.open ("SEditor.html", "newwindow", "height=300, width=600, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") 
+								}
+								function openAdd(){
+									window.open ("SAdd.html", "newwindow", "height=300, width=600, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") 
+								}
+								function deleteT(){
+									
+								}
+							</script>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    name: springboot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/final_app?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2B8
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    dbcp2:
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+    tomcat:
+      max-active: 20
+      initial-size: 1
+    username: root
+    password: root
+  thymeleaf:
+    prefix: classpath:/templates/
+    mode: HTML
+    cache: false
+    servlet:
+      content-type: text/html
+    encoding: UTF-8
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+    show-sql: true
+debug: false

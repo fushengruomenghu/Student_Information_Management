@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>学生成绩管理系统</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="https://cdn.bootcss.com/jquery/1.2.3/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<div id="header">
+			<div class="container">
+
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="#">成绩管理系统</a></h1>
+				</div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li>
+							<a href="teacher.html">老师信息管理</a>
+						</li>
+						<li>
+							<a href="student.html">学生信息管理</a>
+						</li>
+						<li>
+							<a href="course.html">课程管理</a>
+						</li>
+						<li class="active">
+							<a href="grade.html">成绩管理</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row">
+
+					<div id="content" class="12u skel-cell-important" align="center">
+						<section>
+							<header>
+								<h2>学生成绩管理</h2>
+							</header>
+							<table>
+								<tr>
+									<th>学号<input type="text" name="job_num" id="job_num" value="" /></th>
+									<th>姓名 <input type="text" id="name" value="" /></th>
+									<th>学科 <input type="text" id="course" value="" /></th>
+									<th><input type="submit" id="" name="" value="筛选" /></th>
+								</tr>								
+							</table>
+							<table id="tableExcel" width="800" style="border:groove">
+
+								<thead style="font-weight:bolder" bgcolor="yellow">
+									<tr>
+										<th>序号</th>
+										<th>学号</th>
+										<th>姓名</th>
+										<th>学科</th>
+										<th>老师</th>
+										<th>平时成绩</th>
+										<th>期中成绩</th>
+										<th>期末成绩</th>
+										<th>实验成绩</th>
+										<th>总评成绩</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>1</th>
+										<th>Z09316201</th>
+										<th>张三</th>
+										<th>web系统与技术</th>
+										<th>李四</th>
+										<th>80</th>
+										<th>78</th>
+										<th>90</th>
+										<th>67</th>
+										<th>82</th>															
+									</tr>
+									<tr>
+										<th>1</th>
+										<th>Z09316201</th>
+										<th>张三</th>
+										<th>web系统与技术</th>
+										<th>李四</th>
+										<th>80</th>
+										<th>78</th>
+										<th>90</th>
+										<th>67</th>
+										<th>82</th>															
+									</tr>
+									<tr>
+										<th>1</th>
+										<th>Z09316201</th>
+										<th>张三</th>
+										<th>web系统与技术</th>
+										<th>李四</th>
+										<th>80</th>
+										<th>78</th>
+										<th>90</th>
+										<th>67</th>
+										<th>82</th>															
+									</tr>
+									<tr>
+										<th>1</th>
+										<th>Z09316201</th>
+										<th>张三</th>
+										<th>web系统与技术</th>
+										<th>李四</th>
+										<th>80</th>
+										<th>78</th>
+										<th>90</th>
+										<th>67</th>
+										<th>82</th>															
+									</tr>
+									<tr>
+										<th>1</th>
+										<th>Z09316201</th>
+										<th>张三</th>
+										<th>web系统与技术</th>
+										<th>李四</th>
+										<th>80</th>
+										<th>78</th>
+										<th>90</th>
+										<th>67</th>
+										<th>82</th>															
+									</tr>
+									
+								</tbody>
+							</table>
+							<a href="#"><input type="button" value="添加" onclick="openAdd()" /></a>
+							<input type="button" value="编辑" onclick="openEditor()" />
+							<input type="button" onclick="Export(tableExcel)" value="导出" />
+							<script>
+								function openEditor() {
+									window.open("Geditor.html", "newwindow", "height=300, width=600, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+								}
+
+								function openAdd() {
+									window.open("GAdd.html", "newwindow", "height=300, width=600, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+								}
+
+								function deleteT() {
+
+								}
+
+								var idTmr;
+
+								function getExplorer() {
+									var explorer = window.navigator.userAgent;
+									//ie  
+									if(explorer.indexOf("MSIE") >= 0) {
+										return 'ie';
+									}
+									//firefox  
+									else if(explorer.indexOf("Firefox") >= 0) {
+										return 'Firefox';
+									}
+									//Chrome  
+									else if(explorer.indexOf("Chrome") >= 0) {
+										return 'Chrome';
+									}
+									//Opera  
+									else if(explorer.indexOf("Opera") >= 0) {
+										return 'Opera';
+									}
+									//Safari  
+									else if(explorer.indexOf("Safari") >= 0) {
+										return 'Safari';
+									}
+								}
+
+								function
+								Export(tableid) {
+									if(getExplorer() == 'ie') {
+										var curTbl = document.getElementById(tableid);
+										var oXL = new ActiveXObject("Excel.Application");
+										var oWB = oXL.Workbooks.Add();
+										var xlsheet = oWB.Worksheets(1);
+										var sel = document.body.createTextRange();
+										sel.moveToElementText(curTbl);
+										sel.select();
+										sel.execCommand("Copy");
+										xlsheet.Paste();
+										oXL.Visible = true;
+
+										try {
+											var fname = oXL.Application.GetSaveAsFilename("Excel.xls", "Excel Spreadsheets (*.xls), *.xls");
+										} catch(e) {
+											print("Nested catch caught " + e);
+										} finally {
+											oWB.SaveAs(fname);
+											oWB.Close(savechanges = false);
+											oXL.Quit();
+											oXL = null;
+											idTmr = window.setInterval("Cleanup();", 1);
+										}
+
+									} else {
+										tableToExcel(tableid)
+									}
+								}
+
+								function Cleanup() {
+									window.clearInterval(idTmr);
+									CollectGarbage();
+								}
+								var tableToExcel = (function() {
+									var uri = 'data:application/vnd.ms-excel;base64,',
+										template = '<html><head><meta charset="UTF-8"></head><body><table>{table}</table></body></html>',
+										base64 = function(s) {
+											return window.btoa(unescape(encodeURIComponent(s)))
+										},
+										format = function(s, c) {
+											return s.replace(/{(\w+)}/g,
+												function(m, p) {
+													return c[p];
+												})
+										}
+									return function(table, name) {
+										if(!table.nodeType) table = document.getElementById(table)
+										var ctx = {
+											worksheet: name || 'Worksheet',
+											table: table.innerHTML
+										}
+										window.location.href = uri + base64(format(template, ctx))
+									}
+								})()
+							</script>
+						</section>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
